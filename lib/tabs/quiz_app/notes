@@ -1,0 +1,63 @@
+flutter is a frame work for dart
+it works with widgets
+Widgets are : Appbar, floating action button, Text, etc
+You can build your own widget
+
+
+Stateful widget / stateless widget
+
+void main() is a function
+    they are code snip its
+    {} surround the function body
+    you can call a function
+
+main is a special function name since its the starting function
+
+Text = string
+numbers = integers or floats
+    float = 2.12
+    integers = 2
+
+a void function does not return anything
+
+you can make functions return values with the return command
+
+variables can store information
+with the var command
+
+extends
+
+
+
+
+
+
+
+
+first code
+class Person {
+  String name;
+  int age;
+  Person(String inputName, int age) {
+    name = inputName;
+    this.age = age;
+
+  }
+}
+
+double addNumbers(double num1, double num2){
+ // print(num1 + num2);
+  return num1 + num2;
+}
+
+void main() {
+  var p1 = Person(inputName = 'Quinten', age = 17);
+  var p2 = Person(inputName = 'Monke', age = 14);
+  p2.name = 'Ruben';
+  print(p1.age);
+  print(p2.name);
+  double firstResult;
+  firstResult = addNumbers(1, 2.20);
+  print(firstResult + 1);
+  print('Hello!');
+}
