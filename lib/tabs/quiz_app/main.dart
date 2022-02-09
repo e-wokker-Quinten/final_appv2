@@ -7,9 +7,7 @@ import './result.dart';
 //  runApp(MyApp());
 //}
 
-
 class MyAppQuiz extends StatefulWidget {
-
   @override
   State<StatefulWidget> createState() {
     return _MyAppQuizState();
@@ -21,31 +19,30 @@ class _MyAppQuizState extends State<MyAppQuiz> {
 
   final _questions = const [
     {
-      'questionText': 'What\'s your favorite color?',
+      'questionText': 'What\'s my favorite color?',
       'answers': [
         {'text': 'Black', 'score': 10},
         {'text': 'Red', 'score': 5},
-        {'text': 'Greenm', 'score': 3},
-        {'text': 'White', 'score': 1},
+        {'text': 'Green', 'score': 1},
+        {'text': 'White', 'score': 10},
       ],
     },
     {
-      'questionText': 'What\'s your favorite animal?',
+      'questionText': 'What\'s my favorite animal?',
       'answers': [
         {'text': 'Rabbit', 'score': 8},
         {'text': 'Lion', 'score': 4},
         {'text': 'Snake', 'score': 10},
-{'text': 'Elephant', 'score': 2}, 	      
+        {'text': 'Elephant', 'score': 2},
         {'text': 'Sam the man', 'score': 1},
       ],
     },
     {
-      'questionText': 'Who\' your favorite instructor?',
+      'questionText': 'Are you in possesion of an e-bike?',
       'answers': [
-        {'text': 'D       N', 'score': 1},
-        {'text': 'E       U', 'score': 1},
-        {'text': 'E       T', 'score': 1},
-        {'text': 'Z       S', 'score': 1},
+        {'text': 'yes', 'score': 10},
+        {'text': 'no', 'score': 4},
+        {'text': 'no eww', 'score': 1}
       ],
     },
   ];
@@ -72,8 +69,9 @@ class _MyAppQuizState extends State<MyAppQuiz> {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-              title:
-                  Text('My First App', style: TextStyle(color: Colors.black)),
+              title: Text('Friendship eligibility quiz',
+                  style: TextStyle(
+                      color: Colors.black, fontFamily: 'RobotoSlabs')),
               backgroundColor: Colors.blueGrey),
           body: _questionIndex < _questions.length
               ? Quiz(
