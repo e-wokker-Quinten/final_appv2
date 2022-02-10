@@ -2,6 +2,7 @@ import 'dart:core';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
 
 import 'todo.dart';
 
@@ -23,6 +24,8 @@ class ToDoList extends StatelessWidget {
       height: 800,
       child: ToDos.isEmpty
           ? Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 const Text('Nothing to do... Lets goooo'),
                 Image.asset('lib/tabs/to_do_app/assets/images/waiting.gif')
@@ -53,7 +56,7 @@ class ToDoList extends StatelessWidget {
                               ToDos[index].context,
                             ),
                           ),
-                          Text(DateTime.now().toString()),
+                          Text(DateFormat('yyyy-MM-dd hh:mm').format(DateTime.now()).toString()),
                         ],
                       ),
                       Container(

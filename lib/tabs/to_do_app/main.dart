@@ -2,6 +2,7 @@ import 'dart:core';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
 
 import './newtodo.dart';
 import './todo.dart';
@@ -76,9 +77,7 @@ class _MyHomePageState extends State<MyAppToDo> {
         title: const Text('To do List'),
         backgroundColor: Theme.of(context).primaryColor,
       ),
-      body: Container(
-        child: ToDoList(_toDoList, _updateUI),
-      ),
+      body: ToDoList(_toDoList, _updateUI),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),

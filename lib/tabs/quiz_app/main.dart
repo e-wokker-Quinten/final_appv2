@@ -70,8 +70,7 @@ class _MyAppQuizState extends State<MyAppQuiz> {
       home: Scaffold(
           appBar: AppBar(
               title: Text('Friendship eligibility quiz',
-                  style: TextStyle(
-                      color: Colors.black, fontFamily: 'RobotoSlabs')),
+                  style: TextStyle(fontFamily: 'RobotoSlabs')),
               backgroundColor: Colors.blueGrey),
           body: _questionIndex < _questions.length
               ? Quiz(
