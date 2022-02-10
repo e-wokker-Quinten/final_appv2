@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
@@ -8,7 +6,7 @@ class SidePanel extends StatelessWidget {
   final int rotate;
   final double quarter;
 
-  SidePanel(this.textOnWall, this.quarter,this.rotate);
+  SidePanel(this.textOnWall, this.quarter, this.rotate);
 
   @override
   Widget build(BuildContext context) {

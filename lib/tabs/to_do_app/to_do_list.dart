@@ -23,10 +23,13 @@ class ToDoList extends StatelessWidget {
       height: 800,
       child: ToDos.isEmpty
           ? Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text('Nothing to do... Lets goooo'),
-                Image.asset('assets/images/waiting.png')
+                Text(
+                  'Nothing to do... Lets goooo',
+                  textAlign: TextAlign.center,
+                ),
+                Image.asset('lib\tabs\to_do_app\assets\images\waiting.png')
               ],
             )
           : ListView.builder(
