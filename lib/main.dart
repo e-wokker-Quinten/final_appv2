@@ -6,6 +6,7 @@ import 'custom_widgets/mainbutton_widget.dart';
 import 'tabs/quiz_app/main.dart';
 import 'tabs/textpage/main.dart';
 import 'tabs/to_do_app/main.dart';
+import 'tabs/to_do_app/todo.dart';
 
 void main() {
   runApp(
@@ -33,6 +34,17 @@ class Home extends StatelessWidget {
   void temporary() {}
   int itemCount = 7;
   double size = 12;
+
+  
+  final List<ToDo> toDoList = [
+    ToDo(
+      title: 'cut grass',
+      context: 'use lawn mower',
+      id: DateTime.now().toString(),
+      date: DateTime.now(),
+      importance: 2.3,
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {

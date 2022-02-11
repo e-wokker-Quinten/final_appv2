@@ -8,37 +8,14 @@ import './newtodo.dart';
 import './todo.dart';
 import './to_do_list.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'To do list',
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        colorScheme: ColorScheme.fromSwatch(accentColor: Colors.amber),
-      ),
-      home: MyAppToDo(),
-    );
-  }
-}
-
 class MyAppToDo extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyAppToDo> {
-  final List<ToDo> _toDoList = [
-    ToDo(
-      title: 'cut grass',
-      context: 'use lawn mower',
-      id: DateTime.now().toString(),
-      date: DateTime.now(),
-      importance: 2.3,
-    ),
-  ];
+    
+  
 
   void _addNewToDoPoint(String txTitle, String txContext, double txImportance) {
     final newTx = ToDo(
@@ -48,9 +25,9 @@ class _MyHomePageState extends State<MyAppToDo> {
         importance: txImportance,
         title: txTitle);
     setState(() {
-      _toDoList.add(newTx);
+      toDoList.add(newTx);
     });
-    print(_toDoList);
+    print(toDoList);
   }
 
   void startAddNewToDo(BuildContext ctx) {
@@ -62,10 +39,10 @@ class _MyHomePageState extends State<MyAppToDo> {
     );
   }
 
-  void _updateUI(List<ToDo> _toDoList, index) {
+  void _updateUI(List<ToDo> toDoList, index) {
     setState(() {
-      _toDoList.removeAt(index);
-      print(_toDoList);
+      toDoList.removeAt(index);
+      print(toDoList);
     });
   }
 
@@ -77,7 +54,7 @@ class _MyHomePageState extends State<MyAppToDo> {
         title: const Text('To do List'),
         backgroundColor: Theme.of(context).primaryColor,
       ),
-      body: ToDoList(_toDoList, _updateUI),
+      body: ToDoList(toDoList, _updateUI),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
